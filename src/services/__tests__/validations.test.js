@@ -32,4 +32,8 @@ describe("validations tests suites - isValid", () => {
         const result = isValid("Loazzzzzzz_");
         expect(result).toBe(false);
     });
+    it("should return true as the label is corect", () => {
+        const result = isValid("Loazzzzzz8_");
+        expect(result).toBe(true);
+    });
 });
