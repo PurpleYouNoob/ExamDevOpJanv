@@ -21,7 +21,11 @@ describe("validations tests suites - isEmpty", () => {
 
 describe("validations tests suites - isValid", () => {
     it("should return false as the label less then 8 char", () => {
-        const result = isValid("Lo");
+        const result = isValid("Lo8_");
+        expect(result).toBe(false);
+    });
+    it("should return false as the label doesn't have a special char", () => {
+        const result = isValid("Loazzzzzzz8");
         expect(result).toBe(false);
     });
 });
