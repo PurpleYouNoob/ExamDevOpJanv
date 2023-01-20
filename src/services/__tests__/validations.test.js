@@ -28,4 +28,8 @@ describe("validations tests suites - isValid", () => {
         const result = isValid("Loazzzzzzz8");
         expect(result).toBe(false);
     });
+    it("should return false as the label doesn't have a number", () => {
+        const result = isValid("Loazzzzzzz_");
+        expect(result).toBe(false);
+    });
 });
